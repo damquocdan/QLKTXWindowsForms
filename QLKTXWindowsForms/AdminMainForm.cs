@@ -69,10 +69,17 @@ namespace QLKTXWindowsForms
             AddForm(formListRoom);
         }
 
+
+        private void dịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListService formListService = new FormListService();
+            AddForm(formListService);
+
         private void hợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormOccupancy formOccupancy = new FormOccupancy();
             AddForm(formOccupancy);
+
         }
     }
 }

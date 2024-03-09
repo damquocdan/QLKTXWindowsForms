@@ -74,6 +74,8 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(289, 22);
             this.textBoxEmail.TabIndex = 3;
+            this.textBoxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormLogin_KeyPress);
+
             // 
             // textBoxPassword
             // 
@@ -83,6 +85,8 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(289, 22);
             this.textBoxPassword.TabIndex = 4;
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormLogin_KeyPress);
+
             // 
             // buttonLogin
             // 

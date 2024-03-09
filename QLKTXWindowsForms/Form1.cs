@@ -19,7 +19,14 @@ namespace QLKTXWindowsForms
         {
             InitializeComponent();
         }
-
+        private void FormLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Xử lý sự kiện Enter tại đây, chẳng hạn gọi hàm kiểm tra đăng nhập.
+                buttonLogin_Click(sender, e);
+            }
+        }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             string username = textBoxEmail.Text;

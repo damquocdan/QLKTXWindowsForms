@@ -140,6 +140,7 @@
             this.hợpĐồngToolStripMenuItem.Name = "hợpĐồngToolStripMenuItem";
             this.hợpĐồngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.hợpĐồngToolStripMenuItem.Text = "Hợp đồng ";
+            this.hợpĐồngToolStripMenuItem.Click += new System.EventHandler(this.hợpĐồngToolStripMenuItem_Click);
             // 
             // dịchVụToolStripMenuItem
             // 
@@ -201,19 +202,19 @@
             // thốngKêSinhViênToolStripMenuItem
             // 
             this.thốngKêSinhViênToolStripMenuItem.Name = "thốngKêSinhViênToolStripMenuItem";
-            this.thốngKêSinhViênToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.thốngKêSinhViênToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thốngKêSinhViênToolStripMenuItem.Text = "Sinh viên";
             // 
             // tToolStripMenuItem
             // 
             this.tToolStripMenuItem.Name = "tToolStripMenuItem";
-            this.tToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.tToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tToolStripMenuItem.Text = "Phòng";
             // 
             // kinhTếToolStripMenuItem
             // 
             this.kinhTếToolStripMenuItem.Name = "kinhTếToolStripMenuItem";
-            this.kinhTếToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.kinhTếToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.kinhTếToolStripMenuItem.Text = "Kinh  tế";
             // 
             // statusStrip

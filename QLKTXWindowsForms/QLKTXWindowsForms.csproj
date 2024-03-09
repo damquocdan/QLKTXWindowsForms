@@ -161,6 +161,7 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>CSDL.tt</DependentUpon>
     </Compile>
+    <Compile Include="System.cs" />
     <Compile Include="Transaction.cs">
       <DependentUpon>CSDL.tt</DependentUpon>
     </Compile>

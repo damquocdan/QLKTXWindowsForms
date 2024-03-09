@@ -37,7 +37,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnEE = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.CbGV = new System.Windows.Forms.ComboBox();
+            this.CbMOWRoom = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSMH)).BeginInit();
@@ -86,6 +86,7 @@
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThemMoi
             // 
@@ -99,6 +100,7 @@
             this.btnThemMoi.TabIndex = 5;
             this.btnThemMoi.Text = "Thêm mới";
             this.btnThemMoi.UseVisualStyleBackColor = false;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // btnSua
             // 
@@ -112,6 +114,7 @@
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Cập nhật";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -125,6 +128,7 @@
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnEE
             // 
@@ -149,14 +153,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Loại phòng:";
             // 
-            // CbGV
+            // CbMOWRoom
             // 
-            this.CbGV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbGV.FormattingEnabled = true;
-            this.CbGV.Location = new System.Drawing.Point(816, 168);
-            this.CbGV.Name = "CbGV";
-            this.CbGV.Size = new System.Drawing.Size(159, 27);
-            this.CbGV.TabIndex = 2;
+            this.CbMOWRoom.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbMOWRoom.FormattingEnabled = true;
+            this.CbMOWRoom.Location = new System.Drawing.Point(816, 168);
+            this.CbMOWRoom.Name = "CbMOWRoom";
+            this.CbMOWRoom.Size = new System.Drawing.Size(159, 27);
+            this.CbMOWRoom.TabIndex = 2;
             // 
             // label3
             // 
@@ -186,7 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 473);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.CbGV);
+            this.Controls.Add(this.CbMOWRoom);
             this.Controls.Add(this.btnEE);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -217,7 +221,7 @@
         private System.Windows.Forms.Button btnEE;
         public System.Windows.Forms.DataGridView dgvDSMH;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox CbGV;
+        private System.Windows.Forms.ComboBox CbMOWRoom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
     }

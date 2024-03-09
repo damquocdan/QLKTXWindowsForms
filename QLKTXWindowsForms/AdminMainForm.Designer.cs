@@ -140,6 +140,7 @@
             this.hợpĐồngToolStripMenuItem.Name = "hợpĐồngToolStripMenuItem";
             this.hợpĐồngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.hợpĐồngToolStripMenuItem.Text = "Hợp đồng ";
+            this.hợpĐồngToolStripMenuItem.Click += new System.EventHandler(this.hợpĐồngToolStripMenuItem_Click);
             // 
             // dịchVụToolStripMenuItem
             // 

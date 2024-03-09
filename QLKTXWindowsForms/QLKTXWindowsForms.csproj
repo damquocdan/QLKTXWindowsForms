@@ -39,6 +39,10 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -88,6 +92,7 @@
     <Compile Include="DH.cs">
       <DependentUpon>CSDL.tt</DependentUpon>
     </Compile>
+    <Compile Include="ExportExcel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +134,12 @@
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOccupancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOccupancy.Designer.cs">
+      <DependentUpon>FormOccupancy.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegesterStudent.cs">
       <SubType>Form</SubType>
@@ -180,6 +191,9 @@
     <EmbeddedResource Include="FormListStudent.resx">
       <DependentUpon>FormListStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOccupancy.resx">
+      <DependentUpon>FormOccupancy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegesterStudent.resx">
       <DependentUpon>FormRegesterStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,19 +228,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="CSDL.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CSDL.Context.cs</LastGenOutput>
       <DependentUpon>CSDL.edmx</DependentUpon>
+      <LastGenOutput>CSDL.Context.cs</LastGenOutput>
     </Content>
     <Content Include="CSDL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CSDL.edmx</DependentUpon>
       <LastGenOutput>CSDL.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

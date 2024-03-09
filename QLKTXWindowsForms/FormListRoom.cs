@@ -34,10 +34,11 @@ namespace QLKTXWindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             txtTimKiem.Text= "";
             CbMOWRoom.Text = "";
+
             btnSua.Text = "Cập nhật";
-            LoadDataRoom();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

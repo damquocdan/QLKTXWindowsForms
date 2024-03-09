@@ -20,9 +20,7 @@ namespace QLKTXWindowsForms
         private void button1_Click(object sender, EventArgs e)
         {
             txtTimKiem.Text = "";
-            CbMOV.Text = "";
             btnSua.Text = "Cập nhật";
-            LoadDataRoom();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace QLKTXWindowsForms
         public FormListRoom()
         {
             InitializeComponent();
+            LoadDataRoom();
         }
         private void LoadDataRoom()
         {
@@ -157,7 +158,9 @@ namespace QLKTXWindowsForms
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
-
+            FormAddRoom formAddRoom = new FormAddRoom();
+            formAddRoom.ShowDialog();
+            LoadDataRoom();
         }
     }
 }

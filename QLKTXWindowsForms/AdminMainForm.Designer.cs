@@ -66,7 +66,7 @@
             this.menuItem4});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(836, 28);
+            this.menuStrip.Size = new System.Drawing.Size(836, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -236,10 +236,10 @@
             // panelMainContent
             // 
             this.panelMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainContent.Location = new System.Drawing.Point(0, 28);
+            this.panelMainContent.Location = new System.Drawing.Point(0, 30);
             this.panelMainContent.Margin = new System.Windows.Forms.Padding(4);
             this.panelMainContent.Name = "panelMainContent";
-            this.panelMainContent.Size = new System.Drawing.Size(836, 498);
+            this.panelMainContent.Size = new System.Drawing.Size(836, 496);
             this.panelMainContent.TabIndex = 2;
             // 
             // AdminMainForm

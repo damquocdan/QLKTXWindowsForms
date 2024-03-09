@@ -31,7 +31,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.checkBoxStatus = new System.Windows.Forms.CheckBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonNotifixcation = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxHanPhong = new System.Windows.Forms.TextBox();
@@ -50,8 +53,6 @@
             this.btnFind = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvHopDong = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -67,17 +68,17 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvHopDong);
-            this.panel1.Location = new System.Drawing.Point(-105, -52);
+            this.panel1.Location = new System.Drawing.Point(6, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1383, 794);
+            this.panel1.Size = new System.Drawing.Size(1217, 752);
             this.panel1.TabIndex = 14;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(586, 86);
+            this.label3.Location = new System.Drawing.Point(484, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(310, 36);
             this.label3.TabIndex = 17;
@@ -85,9 +86,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.checkBoxStatus);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.buttonNotifixcation);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
@@ -96,23 +98,61 @@
             this.panel2.Controls.Add(this.buttonCreate);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnFind);
-            this.panel2.Location = new System.Drawing.Point(1126, 167);
+            this.panel2.Location = new System.Drawing.Point(979, 132);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(235, 611);
+            this.panel2.Size = new System.Drawing.Size(218, 599);
             this.panel2.TabIndex = 16;
             // 
-            // button1
+            // checkBoxStatus
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(8, 495);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 44);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Gửi thông báo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.checkBoxStatus.AutoSize = true;
+            this.checkBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxStatus.Location = new System.Drawing.Point(8, 250);
+            this.checkBoxStatus.Name = "checkBoxStatus";
+            this.checkBoxStatus.Size = new System.Drawing.Size(79, 24);
+            this.checkBoxStatus.TabIndex = 30;
+            this.checkBoxStatus.Text = "Status";
+            this.checkBoxStatus.UseVisualStyleBackColor = true;
+            this.checkBoxStatus.CheckedChanged += new System.EventHandler(this.checkBoxStatus_CheckedChanged);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(9, 547);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(180, 44);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Export Excel";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(10, 348);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(179, 41);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Cập nhật";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // buttonNotifixcation
+            // 
+            this.buttonNotifixcation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNotifixcation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNotifixcation.Location = new System.Drawing.Point(8, 495);
+            this.buttonNotifixcation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNotifixcation.Name = "buttonNotifixcation";
+            this.buttonNotifixcation.Size = new System.Drawing.Size(180, 44);
+            this.buttonNotifixcation.TabIndex = 27;
+            this.buttonNotifixcation.Text = "Gửi thông báo";
+            this.buttonNotifixcation.UseVisualStyleBackColor = true;
+            this.buttonNotifixcation.Click += new System.EventHandler(this.buttonNotifixcation_Click);
             // 
             // panel6
             // 
@@ -246,7 +286,7 @@
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtID);
-            this.panel3.Location = new System.Drawing.Point(3, 5);
+            this.panel3.Location = new System.Drawing.Point(5, 5);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(197, 55);
@@ -304,44 +344,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHopDong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHopDong.Location = new System.Drawing.Point(118, 167);
+            this.dgvHopDong.Location = new System.Drawing.Point(4, 135);
             this.dgvHopDong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvHopDong.Name = "dgvHopDong";
             this.dgvHopDong.ReadOnly = true;
             this.dgvHopDong.RowHeadersWidth = 51;
             this.dgvHopDong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHopDong.Size = new System.Drawing.Size(996, 611);
+            this.dgvHopDong.Size = new System.Drawing.Size(974, 588);
             this.dgvHopDong.TabIndex = 11;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(10, 348);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 41);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Cập nhật";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(9, 547);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 44);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Gửi thông báo";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // FormOccupancy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 753);
+            this.ClientSize = new System.Drawing.Size(1276, 767);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormOccupancy";
@@ -349,6 +365,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -385,8 +402,9 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxHanPhong;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonNotifixcation;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckBox checkBoxStatus;
     }
 }

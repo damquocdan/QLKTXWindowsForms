@@ -25,7 +25,6 @@ namespace QLKTXWindowsForms
             // Thêm tiêu đề cho bảng
             for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
             {
-                Console.WriteLine(dataGridView.Columns[i - 1].HeaderText);
                 worksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
                 Excel.Range headerRange = worksheet.Range[worksheet.Cells[1, i], worksheet.Cells[1, i]];
                 headerRange.Font.Bold = true;
@@ -40,7 +39,6 @@ namespace QLKTXWindowsForms
             {
                 for (int j = 0; j < dataGridView.Columns.Count; j++)
                 {
-                    Console.WriteLine(dataGridView.Rows[i].Cells[j].Value == null);
                     worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value != null ? dataGridView.Rows[i].Cells[j].Value.ToString() : "";
                 }
             }
